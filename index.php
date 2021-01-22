@@ -1,3 +1,7 @@
+<?php
+    include __DIR__ . '/partials/db.php';
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +11,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>cioa proviamo se funziona tutto quanto</h1>
+    <header></header>
+
+    <main>
+        <div class="container">
+            <?php foreach ($discs as $oneDisc) {?>
+                <div class="disc-container">
+                    <img src="" alt="">
+                    <h2><?php echo $oneDisc["title"]; ?></h2>
+                    <h3><?php echo $oneDisc["author"]; ?></h3>
+                    <h4><?php echo $oneDisc["year"]; ?></h4>
+                </div>
+            <?php } ?>
+        </div>
+    </main>
+
+    <footer></footer>
 </body>
 </html>
