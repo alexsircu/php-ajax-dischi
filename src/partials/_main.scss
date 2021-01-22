@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: auto;
+}
+
+.disc-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 3 - 100px);
+    height: 400px;
+    background-color: black;
+    padding: 10px 0;
+    margin: 50px;
+    img {
+        max-width: 250px;
+    }
+    h2 {
+        color: white;
+        text-align: center;
+        margin-top: 10px;
+    }
+    h3, p {
+        color: lightgrey;
+    }
+}
