@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . '/partials/db.php';
+include __DIR__ . '/db.php';
 ?>
 
 <!DOCTYPE html>
@@ -13,22 +13,11 @@ include __DIR__ . '/partials/db.php';
 </head>
 
 <body>
-    <header></header>
+    <?php include __DIR__ . '/partials/header.php'; ?>
 
-    <main>
-        <div class="container">
-            <?php foreach ($discs as $oneDisc) { ?>
-                <div class="disc-container">
-                    <img src="<?php echo $oneDisc["poster"]; ?>" alt="">
-                    <h2><?php echo $oneDisc["title"]; ?></h2>
-                    <h3><?php echo $oneDisc["author"]; ?></h3>
-                    <p><?php echo $oneDisc["year"]; ?></p>
-                </div>
-            <?php } ?>
-        </div>
-    </main>
+    <?php include __DIR__ . '/partials/main.php'; ?>
 
-    <footer></footer>
+    <?php include __DIR__ . '/partials/footer.php'; ?>
 </body>
 
 </html>
