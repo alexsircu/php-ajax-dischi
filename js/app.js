@@ -1855,7 +1855,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0__.default({
   },
   mounted: function mounted() {
     var self = this;
-    axios.get("http://localhost/php-ajax-dischi/server.php").then(function (response) {
+    axios.get("server.php").then(function (response) {
       self.discsArray = response.data;
     });
   }
