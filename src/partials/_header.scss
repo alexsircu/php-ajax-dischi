@@ -5,8 +5,22 @@ header {
 }
 
 #header-left {
+    width: 50%;
+    height: 50px;
     padding-left: 50px;
     img {
         max-height: 40px;
+    }
+}
+
+#header-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    height: 50px;
+    padding-right: 50px;
+    select {
+        margin-right: 20px;
     }
 }

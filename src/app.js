@@ -6,7 +6,8 @@ var app = new Vue(
         el: "#root",
         data: {
             logo: "img/logo.jpg",
-            discsArray: []
+            discsArray: [],
+            genre: ""
         },
         mounted: function() {
             var self = this;
@@ -14,7 +15,22 @@ var app = new Vue(
             .get("server.php")
             .then(function(response) {
                 self.discsArray = response.data;
+                console.log(response.data);
             });
+        },
+        methods: {
+            toFilter: function() {
+            var self = this;
+            axios
+            .get("server.php",{
+                params: {
+                    genre: self.genre
+                }
+            })
+            .then(function(response) {
+                self.discsArray = response.data;
+            });
+            }
         }
     }
 );

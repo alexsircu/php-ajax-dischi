@@ -15,6 +15,16 @@
                 <div id="header-left">
                     <img :src="logo" alt="Spotify-logo">
                 </div>
+                <div id="header-right">
+                    <select name="genre" v-model="genre">
+                        <option value="">Tutti</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Pop">Pop</option>
+                        <option value="Jazz">Jazz</option>
+                        <option value="Metal">Metal</option>
+                    </select>
+                    <button type="button" name="button" @click="toFilter">Filtra</button>
+                </div>
             </div>
         </header>
 
@@ -25,6 +35,8 @@
                     <h2>{{disc.title}}</h2>
                     <h3>{{disc.author}}</h3>
                     <p>{{disc.year}}</p>
+                    <p>{{disc.genre}}
+                    </p>
                 </div>
             </div>
         </main>
@@ -41,4 +53,5 @@
 </body>
 
 <script src="js/app.js"></script>
+
 </html>

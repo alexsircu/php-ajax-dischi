@@ -15,10 +15,28 @@ header {
 }
 
 #header-left {
+  width: 50%;
+  height: 50px;
   padding-left: 50px;
 }
 #header-left img {
   max-height: 40px;
+}
+
+#header-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+  height: 50px;
+  padding-right: 50px;
+}
+#header-right select {
+  margin-right: 20px;
+}
+
+main {
+  min-height: calc(100vh - 100px);
 }
 
 .container {

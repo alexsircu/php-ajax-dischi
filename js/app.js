@@ -1851,13 +1851,27 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0__.default({
   el: "#root",
   data: {
     logo: "img/logo.jpg",
-    discsArray: []
+    discsArray: [],
+    genre: ""
   },
   mounted: function mounted() {
     var self = this;
     axios.get("server.php").then(function (response) {
       self.discsArray = response.data;
+      console.log(response.data);
     });
+  },
+  methods: {
+    toFilter: function toFilter() {
+      var self = this;
+      axios.get("server.php", {
+        params: {
+          genre: self.genre
+        }
+      }).then(function (response) {
+        self.discsArray = response.data;
+      });
+    }
   }
 });
 
